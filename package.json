@@ -1,0 +1,29 @@
+{
+  "name": "container-crane",
+  "version": "1.0.0",
+  "description": "Gogs WebHook listener. Deploy your app with a single 'git push production'.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "ava",
+    "dev": "ava --watch --timeout=5s"
+  },
+  "keywords": [
+    "webhook",
+    "express",
+    "docker",
+    "git",
+    "deployment"
+  ],
+  "author": "v-braun",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "request": "^2.72.0"
+  },
+  "devDependencies": {
+    "ava": "^0.15.2",
+    "supertest": "^1.2.0"
+  }
+}

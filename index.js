@@ -35,7 +35,11 @@ app.post('/', function(req, res){
   var url = `${req.body.repository.url}/src/${branch}/crane-route`;
 
   return request(url, (error, response, body) => {
-    if (error || response.statusCode != 200) return res.status(400).json({error: 'error during fetching the file: ${url} error: ${error}'});
+    if (error || response.statusCode != 200) {
+      console.log('error fetching from: ' + url);
+      console.log(error);
+      return res.status(400).json({error: `error during fetching the file: ${url} error: ${error}`});
+    }
     
     var tmpFile = path.resolve(__dirname, '.tmp_script');
     fs.writeFile(tmpFile, body, {mode: 0o777}, (err) => {
@@ -55,7 +59,7 @@ app.use(function (req, res) {
 });
 
 var server = app.listen(app.get('port'), function () {
-  console.log('%s is running on port!', app.get('name'), app.get('port'));
+  console.log(`${app.get('name')} is running on port: ${app.get('port')}!`);
 });
 
 module.exports = {server: server, app: app};

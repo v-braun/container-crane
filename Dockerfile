@@ -6,3 +6,5 @@ RUN apt-get update && apt-get install -y curl
 RUN curl -sSL https://get.docker.com/ | sh
 
 EXPOSE 3000
+
+CMD [ "npm", "start" ]

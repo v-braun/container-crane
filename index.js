@@ -11,7 +11,7 @@ var path = require('path');
 
 app.locals.ENV = process.env.NODE_ENV;
 app.set('env', process.env.NODE_ENV);
-app.set('branch', process.env.DEFAULT_BRANCH);
+app.set('branch', process.env.DEFAULT_BRANCH || 'master');
 app.set('debug', process.env.NODE_ENV === 'development');
 app.set('port', process.env.PORT || 3000);
 app.set('name', pack.name);

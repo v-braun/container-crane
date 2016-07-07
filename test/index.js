@@ -57,6 +57,8 @@ test('send valid gogs request should request "crane-route" file', (t)=> {
               res.writeHead(200, { 'Content-Type': 'text' });
               var script = '#!/usr/bin/env node \n' +
                            'console.log("hello from node!");';
+               // script = '#! /bin/bash \n' +
+               //          'echo "hello from node!"';
 
               res.end(script, 'utf-8');
             }

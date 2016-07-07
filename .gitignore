@@ -5,6 +5,7 @@ npm-debug.log*
 
 # temp data
 .tmp_script
+tmp
 
 # Runtime data
 pids

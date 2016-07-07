@@ -47,10 +47,10 @@ app.post('/', function(req, res){
       
       childProcess.execFile(tmpFile, [], (err, stdout, stderr) => {
         if(err) {
-          var msg = 'Error occurred \n' +
-                    'error: ${err}' +
-                    'stdout: ${stdout}' +
-                    'stderr: ${stderr}';
+          var msg = `Error occurred \n` +
+                    `error: ${err} \n` +
+                    `stdout: ${stdout} \n` +
+                    `stderr: ${stderr}`;
 
           return res.status(400).json({err: msg});
         }

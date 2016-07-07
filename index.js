@@ -32,7 +32,7 @@ app.post('/', function(req, res){
   }
   
   var branch = app.get('branch');
-  var url = `${req.body.repository.url}/src/${branch}/crane-route`;
+  var url = `${req.body.repository.url}/raw/${branch}/crane-route`;
 
   return request(url, (error, response, body) => {
     if (error || response.statusCode != 200) {

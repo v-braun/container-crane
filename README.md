@@ -50,7 +50,7 @@ docker start container-crane
 
 Setup a webhook in your Gogs repository that points to the */gogs/* endpoint of the **container-crane** container:
 
-![image](./doc/create-webhook.jpg)
+![image](https://raw.githubusercontent.com/v-braun/container-crane/master/doc/create-webhook.jpg)
 
 Now you need a deployment script for your app.
 You can write it in bash or node (both is installed on the container-crane Docker image)

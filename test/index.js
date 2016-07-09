@@ -19,7 +19,7 @@ test('send invalid secret gogs request', () => {
   var app = require('../index').app;
   app.set('secret', 'my little secret');
   return request(server)
-          .post('/')
+          .post('/gogs/')
           .send(reqJSON)
           .expect(403);
 });
@@ -31,16 +31,16 @@ test('send valid secret gogs request should not return forbidden', () => {
   var app = require('../index').app;
   app.set('secret', 'my little secret');
   return request(server)
-          .post('/')
+          .post('/gogs/')
           .send(reqJSON)
           .expect(400);
 });
 
-test('send valid gogs request should request "crane-route" file', (t)=> {
+test('send valid gogs request should request "deploy.crane" file', (t)=> {
   return new Promise((resolve, reject) => {
     var repoUrl = 'http://localhost:3001/user/repo';
     var branch = 'production';
-    var expectedUrl = `/user/repo/src/${branch}/crane-route`;
+    var expectedUrl = `/user/repo/raw/${branch}/deploy.crane`;
 
     var reqJSON = require('./fixtures/request_gogs_valid.json');
     reqJSON.repository.url = repoUrl;
@@ -71,7 +71,7 @@ test('send valid gogs request should request "crane-route" file', (t)=> {
     }).listen(3001);
 
     request(server)
-      .post('/')
+      .post('/gogs/')
       .send(reqJSON)
       .expect(200)
       .end((err, res) => {

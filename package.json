@@ -1,7 +1,7 @@
 {
   "name": "container-crane",
   "version": "1.0.0",
-  "description": "Gogs WebHook listener. Deploy your app with a single 'git push production'.",
+  "description": "WebHook listener. Deploy your app with a single 'git push production'.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",

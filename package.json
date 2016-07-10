@@ -1,8 +1,15 @@
 {
   "name": "container-crane",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "WebHook listener. Deploy your app with a single 'git push production'.",
   "main": "index.js",
+  "license": "MIT",
+  "repository": "v-braun/container-crane",
+  "author": {
+    "name": "Viktor Braun (@v_b)",
+    "email": "v-braun@live.de",
+    "url": "www.dev-things.net"
+  },  
   "scripts": {
     "start": "node index.js",
     "test": "ava",
@@ -15,8 +22,6 @@
     "git",
     "deployment"
   ],
-  "author": "v-braun",
-  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",

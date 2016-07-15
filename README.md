@@ -1,4 +1,4 @@
-# ![container crane](https://cdn.rawgit.com/v-braun/container-crane/master/media/logo.svg)
+# ![container crane](https://cdn.rawgit.com/v-braun/container-crane/1664bed60d95b0e8de5c5159fd44fc06ea8095b8/media/logo.svg)
 
 > Listen for webhooks and execute a deployment script
 

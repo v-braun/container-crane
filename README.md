@@ -2,7 +2,7 @@
 
 > Listen for webhooks and execute a deployment script
 
-By [v-braun - www.dev-things.net](http://www.dev-things.net).
+By [v-braun - viktor-braun.de](https://viktor-braun.de).
 
 
 ## Description
